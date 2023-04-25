@@ -13,7 +13,7 @@ namespace TravelManagement.Domain.ValueObjects
         public uint Quantity { get; }
         public bool IsTaken { get; init; }
 
-        public TravelerItem(string name, uint quantity, bool isTaken)
+        public TravelerItem(string name, uint quantity, bool isTaken = false)
         {
             if (string.IsNullOrWhiteSpace(name))
             {
