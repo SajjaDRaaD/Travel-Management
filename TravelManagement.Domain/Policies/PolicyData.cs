@@ -8,5 +8,5 @@ using TravelManagement.Domain.ValueObjects;
 
 namespace TravelManagement.Domain.Policies
 {
-    public record PolicyData(TravelDays days, Gender gender, Temperature temperature, Destination destination)
+    public record PolicyData(TravelDays days, Consts.Gender Gender, ValueObjects.Temperature Temperature, Destination destination);
 }
