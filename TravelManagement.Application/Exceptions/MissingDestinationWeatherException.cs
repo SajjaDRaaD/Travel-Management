@@ -11,7 +11,7 @@ namespace TravelManagement.Application.Exceptions
     internal class MissingDestinationWeatherException : TravelerCheckListException
     {
         public Destination Destination { get; }
-        public MissingDestinationWeatherException(Destination destination) : base($"Couldn't fetch weather data for Destination '{destination.country}/{destination.city}'")
+        public MissingDestinationWeatherException(Destination destination) : base($"Couldn't fetch weather data for Destination '{destination.city}/{destination.country}'.")
             => Destination = destination;
     }
 }
