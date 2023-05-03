@@ -18,6 +18,6 @@ namespace TravelManagement.Domain.Policies.Temperature
             };
 
         public bool IsApplicable(PolicyData data)
-            => data.temperature > 25D;
+            => data.Temperature > 25D;
     }
 }

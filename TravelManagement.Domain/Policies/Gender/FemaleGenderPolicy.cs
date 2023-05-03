@@ -18,6 +18,6 @@ namespace TravelManagement.Domain.Policies.Gender
             };
 
         public bool IsApplicable(PolicyData data)
-            => data.gender is Consts.Gender.Female;
+            => data.Gender is Consts.Gender.Female;
     }
 }
