@@ -7,7 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using TravelManagement.Application.Services;
 using TravelManagement.Infrastructure.EF;
+using TravelManagement.Infrastructure.Logging;
 using TravelManagement.Infrastructure.Services;
+using TravelManagement.Shared.Abstractions.Commands;
 using TravelManagement.Shared.Queries;
 
 namespace TravelManagement.Infrastructure
@@ -19,6 +21,8 @@ namespace TravelManagement.Infrastructure
             services.AddSqlDb(configuration);
             services.AddQueries();
             services.AddSingleton<IWeatherService, DumbWeatherService>();
+
+            services.TryDecorate(typeof(ICommandHandler<>), typeof(LoggingCommandHandlerDecorator<>));
 
             return services;
         }
