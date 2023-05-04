@@ -7,7 +7,7 @@ namespace TravelManagement.Application
 {
     public static class Extensions
     {
-        public static IServiceCollection AddApplicaton(this IServiceCollection services)
+        public static IServiceCollection AddApplication(this IServiceCollection services)
         {
             services.AddCommands();
             services.AddScoped<ITravelerCheckListFactory, TravelerCheckListFactory>();
