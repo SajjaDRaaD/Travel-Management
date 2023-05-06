@@ -23,7 +23,7 @@ namespace TravelManagement.Infrastructure.EF
             services.AddScoped<ITravelerCheckListRepository,TravelerCheckListRepository>();
             services.AddScoped<ITravelerCheckListReadService, TravelerCheckListReadService>();
 
-            var options = configuration.GetOptions<DataBaseOptions>("ConnectionStrings");
+            var options = configuration.GetOptions<DataBaseOptions>("DataBaseConnectionString");
             services.AddDbContext<ReadDbContext>(ctx=>
                 ctx.UseSqlServer(options.ConnectionString));
             services.AddDbContext<WriteDbContext>(ctx =>

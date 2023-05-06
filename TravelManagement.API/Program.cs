@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-ConfigurationManager configuration = new ConfigurationManager();
+ConfigurationManager configuration = builder.Configuration;
 
 builder.Services.AddShared();
 builder.Services.AddApplication();

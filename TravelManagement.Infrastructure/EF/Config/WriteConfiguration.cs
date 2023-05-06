@@ -14,15 +14,6 @@ namespace TravelManagement.Infrastructure.EF.Config
 {
     internal sealed class WriteConfiguration : IEntityTypeConfiguration<TravelerCheckList>, IEntityTypeConfiguration<TravelerItem>
     {
-        public void Configure(EntityTypeBuilder<TravelerItem> builder)
-        {
-            builder.Property<Guid>("Id");
-            builder.Property(pi => pi.Name);
-            builder.Property(pi => pi.Quantity);
-            builder.Property(pi => pi.IsTaken);
-            builder.ToTable("TravelerItems");
-        }
-
         public void Configure(EntityTypeBuilder<TravelerCheckList> builder)
         {
             builder.HasKey(pl => pl.Id);
@@ -32,7 +23,7 @@ namespace TravelManagement.Infrastructure.EF.Config
 
             builder
                 .Property(pl => pl.Id)
-                .HasConversion(id => id, id => new TravelerCheckListId(id));
+                .HasConversion(id => id.Value, id => new TravelerCheckListId(id));
 
             builder
                 .Property(typeof(Destination), "_destination")
@@ -47,6 +38,15 @@ namespace TravelManagement.Infrastructure.EF.Config
             builder.HasMany(typeof(TravelerItem), "_items");
 
             builder.ToTable("TravelerCheckList");
+        }
+
+        public void Configure(EntityTypeBuilder<TravelerItem> builder)
+        {
+            builder.Property<Guid>("Id");
+            builder.Property(pi => pi.Name);
+            builder.Property(pi => pi.Quantity);
+            builder.Property(pi => pi.IsTaken);
+            builder.ToTable("TravelerItems");
         }
     }
 }

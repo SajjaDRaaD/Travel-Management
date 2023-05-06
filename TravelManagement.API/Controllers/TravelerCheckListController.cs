@@ -49,7 +49,7 @@ namespace TravelManagement.API.Controllers
         }
 
 
-        [HttpPut("{TravelerCheckListId:guid}/items/{name}/take")]
+        [HttpPut("{TravelerCheckListId:guid}/items/{name}/Take")]
         public async Task<IActionResult> Put([FromBody] TakeItem command)
         {
             await _commandDispatcher.DispacheAsync(command);
@@ -57,6 +57,10 @@ namespace TravelManagement.API.Controllers
         }
 
         [HttpDelete("{TravelerCheckListId:guid}/items/{name}/")]
-        public async Task<>
+        public async Task<IActionResult> Delete([FromBody] RemoveTravelerItem command)
+        {
+            await _commandDispatcher.DispacheAsync(command);
+            return Ok();
+        }
     }
 }
