@@ -11,11 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelManagement.Shared.Abs
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelManagement.Application", "TravelManagement.Application\TravelManagement.Application.csproj", "{D3244875-21D5-453D-A3FC-8AF90D1611B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelManagement.API", "TravelManagement.API\TravelManagement.API.csproj", "{943E65D8-2143-4FC2-BD09-8CD5BF876F70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelManagement.API", "TravelManagement.API\TravelManagement.API.csproj", "{943E65D8-2143-4FC2-BD09-8CD5BF876F70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelManagement.Shared", "TravelManagment.Shared\TravelManagement.Shared.csproj", "{98D92AF9-2489-4569-8CA0-772CD8104307}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelManagement.Shared", "TravelManagment.Shared\TravelManagement.Shared.csproj", "{98D92AF9-2489-4569-8CA0-772CD8104307}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelManagement.Infrastructure", "TravelManagement.Infrastructure\TravelManagement.Infrastructure.csproj", "{F3D51974-0B53-4CC4-8701-FE38A94FDDCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelManagement.Infrastructure", "TravelManagement.Infrastructure\TravelManagement.Infrastructure.csproj", "{F3D51974-0B53-4CC4-8701-FE38A94FDDCD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

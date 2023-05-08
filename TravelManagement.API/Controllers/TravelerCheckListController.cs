@@ -28,7 +28,7 @@ namespace TravelManagement.API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<TravelerCheckListDto>>> Get([FromRoute] SearchTravelerCheckList query)
+        public async Task<ActionResult<IEnumerable<TravelerCheckListDto>>> Get([FromQuery] SearchTravelerCheckList query)
         {
             var result = await _queryDispatcher.QueryAsync(query);
             return OkOrNotFound(result);
